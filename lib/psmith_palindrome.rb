@@ -9,10 +9,15 @@ class String
     processed_content == processed_content.reverse
   end
 
+  # Returns the letters in the string.
+  def letters
+    chars.select { |char| char.match(/[a-z]/i) }.join
+  end
+
   private
 
     # Returns content for palindrome testing
     def processed_content
-        downcase
+        scan(/[a-z]/i).join.downcase
     end
 end
