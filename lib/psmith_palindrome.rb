@@ -6,6 +6,8 @@ module PsmithPalindrome
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?()
+    processed_content = self.processed_content
+    return false if processed_content.empty?
     processed_content == processed_content.reverse
   end
 
